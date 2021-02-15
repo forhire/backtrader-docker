@@ -1,6 +1,6 @@
 FROM continuumio/anaconda3
 
-RUN pip install backtrader[plotting] backtrader_plotting ibpy
+RUN pip install backtrader[plotting] backtrader_plotting git+https://github.com/blampe/IbPy.git
 
 RUN /opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks 
 
