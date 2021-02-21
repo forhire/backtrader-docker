@@ -1,7 +1,4 @@
-FROM continuumio/anaconda3
+FROM jcrist/alpine-dask-notebook:1.2.2
 
-RUN pip install backtrader[plotting] backtrader_plotting ibapi IbPy2
+RUN /opt/conda/bin/pip install backtrader[plotting] backtrader_plotting ibapi IbPy2
 
-RUN /opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks 
-
-CMD /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root
