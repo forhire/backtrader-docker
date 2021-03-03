@@ -1,0 +1,9 @@
+version: '3'
+services:
+  backtrader:
+    image: "forhire/backtrader-anaconda3"
+    volumes:
+      - ./notebooks:/home/anaconda/notebooks
+    ports:
+      - 8888:8888
+
